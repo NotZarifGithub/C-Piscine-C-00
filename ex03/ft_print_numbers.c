@@ -1,10 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mabd-ram <mabd-ram@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/25 19:59:55 by mabd-ram          #+#    #+#             */
+/*   Updated: 2024/04/25 20:00:59 by mabd-ram         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
-	char number;
+	char	number;
 
-	for (number = '0'; number <= '9'; number++){
+	number = '0';
+	while (number <= '9')
+	{
 		write(1, &number, 1);
+		number++;
 	}
 }
